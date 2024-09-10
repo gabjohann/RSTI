@@ -6,9 +6,9 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-// Pede que o usuároi digite seu nome e captura a resposta
+// Pede que o usuáro digite seu nome e captura a resposta
 rl.question('Escreva seu nome: ', (nome) => {
-  console.log(`Olá, ${nome}!`); // Mostra uma saudação com o nome informado    do
+  console.log(`Olá, ${nome}!`); // Mostra uma saudação com o nome informado
   
   // Fecha a interface de leitura após a resposta
   rl.close();
