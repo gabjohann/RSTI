@@ -1,5 +1,7 @@
 # RSTI - 6491
 
+Cada aula possui sua respectiva pasta, todo material  desenvolvido e/ou utilizado em sala está disponível nela!
+
 ## Comandos básicos de Git
 
 `git add nomeArquivo` -> adiciona um arquivo específico a fila de versionamento
