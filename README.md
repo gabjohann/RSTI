@@ -20,3 +20,9 @@
 `CTRL + S` -> salva o arquivo
 
 `CTRL + B` -> esconde/mostra o menu lateral
+
+`CTRL + K` -> deleta a linha em que o cursor está
+
+`CTRL + SHIFT + A` -> comenta todo o bloco de texto selecionado
+
+`CTRL + Z` -> desfaz a última ação feita
