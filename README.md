@@ -2,6 +2,17 @@
 
 Cada aula possui sua respectiva pasta, todo material  desenvolvido e/ou utilizado em sala está disponível nela!
 
+## Material Complementar
+
+Curso completo de JavaScript realizado pelo professor Matheus Battisti, acesse clicando [aqui](https://youtube.com/playlist?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6&si=h30Jd733yCFZ99Z9).
+
+Ebook de Front-end criado pelo desenvolvedor Iuri, conhecido na internet como Iuri Code, pode ser adquirido clicando [aqui](https://iuricode.com/efront/).
+
+Curso completo de Git & Github realizado pelo dev Felipe Rocha, acesse clicando [aqui](https://youtu.be/Yp0RRTdtkqY?si=u_8Gw1H6bFB1gAof)
+
+Curso completo de JavaScript realizado pelo dev Felipe Rocha, acesse clicando [aqui](https://youtube.com/playlist?list=PLm-VCNNTu3LnlPhqxx03kvjQd3qF6EBdz&si=weLjukWlcXLG1nTW)
+
+
 ## Comandos básicos de Git
 
 `git add nomeArquivo` -> adiciona um arquivo específico a fila de versionamento
