@@ -56,6 +56,21 @@ const listGoals = async () => {
   console.log("Meta(s) marcada(s) como concluída(s)!")
 }
 
+const listCompletedGoals = async () => {
+  const completedGoals = goals.filter((goal) => {
+    return goal.checked
+  })
+
+  if (completedGoals.length == 0) {
+    console.log("Não existem metas concluídas.")
+    return
+  }
+
+  completedGoals.forEach((completedGoal) => {
+    console.log(completedGoal.value)
+  })
+}
+
 const start = async () => {
   while (true) {
     const option = await select({
@@ -68,6 +83,10 @@ const start = async () => {
         {
           name: "Listar meta(s)",
           value: "list",
+        },
+        {
+          name: "Listar meta(s) realizada(s)",
+          value: "completed",
         },
         {
           name: "Sair",
@@ -83,6 +102,9 @@ const start = async () => {
         break
       case "list":
         await listGoals()
+        break
+      case "completed":
+        await listCompletedGoals()
         break
       case "out":
         console.log("Até a próxima!")
