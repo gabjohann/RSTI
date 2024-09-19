@@ -1,4 +1,5 @@
-const { select, input, checkbox } = require("@inquirer/prompts")
+import chalk from "chalk"
+import { select, input, checkbox } from "@inquirer/prompts"
 
 const goal = {
   value: "Tomar 3L de água por dia",
