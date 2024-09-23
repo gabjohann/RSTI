@@ -1,12 +1,21 @@
-import chalk from "chalk"
+import fs from "node:fs/promises"
 import { select, input, checkbox } from "@inquirer/prompts"
 
-const goal = {
-  value: "Tomar 3L de água por dia",
-  checked: false,
+const file = "goals.json"
+let goals
+
+const fetchGoals = async () => {
+  try {
+    const data = await fs.readFile(file, "utf-8") // leitura do arquivo
+    goals = JSON.parse(data)
+  } catch (error) {
+    goals = []
+  }
 }
 
-const goals = [goal]
+const saveGoals = async () => {
+  await fs.writeFile(file, JSON.stringify(goals, null, 2))
+}
 
 const registerGoal = async () => {
   const goal = await input({
@@ -87,8 +96,14 @@ const listIncompletedGoals = async () => {
   })
 }
 
+// deleção das metas
+
 const start = async () => {
+  await fetchGoals()
+
   while (true) {
+    await saveGoals()
+
     const option = await select({
       message: "Menu > ",
       choices: [
