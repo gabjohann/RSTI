@@ -1,0 +1,14 @@
+[
+  {
+    "value": "Ler 30 min por dia",
+    "cheked": true
+  },
+  {
+    "value": "Ir na academia",
+    "cheked": false
+  },
+  {
+    "value": "Tomar 3L de água todos os dias",
+    "checked": false
+  }
+]

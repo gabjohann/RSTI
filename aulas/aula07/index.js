@@ -2,7 +2,10 @@ import fs from "node:fs/promises"
 import { select, input, checkbox } from "@inquirer/prompts"
 
 const file = "goals.json"
+
 let goals
+
+let message = "Bem vindo ao seu controle de metas!"
 
 const fetchGoals = async () => {
   try {
@@ -23,16 +26,18 @@ const registerGoal = async () => {
   })
 
   if (goal.length == 0) {
-    console.log("A meta não pode ser vazia!")
+    message = "A meta não pode ser vazia!"
     return
   }
 
   goals.push({ value: goal, checked: false })
+
+  message = "Meta cadastrada com sucesso!"
 }
 
 const listGoals = async () => {
   if (goals.length == 0) {
-    console.log("Não existem metas cadastradas!")
+    message = "Não existem metas cadastradas!"
     return
   }
 
@@ -50,7 +55,7 @@ const listGoals = async () => {
   })
 
   if (checkedGoals == 0) {
-    console.log("Nenhuma meta foi selecionada!")
+    message = "Nenhuma meta foi selecionada!"
     return
   }
 
@@ -63,7 +68,7 @@ const listGoals = async () => {
     goal.checked = true
   })
 
-  console.log("Meta(s) marcada(s) como concluída(s)!")
+  message = "Meta(s) marcada(s) como concluída(s)!"
 }
 
 const listCompletedGoals = async () => {
@@ -72,7 +77,7 @@ const listCompletedGoals = async () => {
   })
 
   if (completedGoals.length == 0) {
-    console.log("Não existem metas concluídas.")
+    message = "Não existem metas concluídas."
     return
   }
 
@@ -87,7 +92,7 @@ const listIncompletedGoals = async () => {
   })
 
   if (incompletedGoals.length == 0) {
-    console.log("Todas as metas foram concluídas!")
+    message = "Todas as metas foram concluídas!"
     return
   }
 
@@ -96,12 +101,57 @@ const listIncompletedGoals = async () => {
   })
 }
 
-// deleção das metas
+const deleteGoals = async () => {
+  /* Informa o usuário caso não existam metas cadastradas */
+  if (goals.length == 0) {
+    message = "Não existem metas cadastradas!"
+    return
+  }
+
+  /* cada meta é transformada em um objeto */
+  const uncheckedGoals = goals.map((goal) => {
+    return { value: goal.value, checked: false }
+  })
+
+  /* exibir o checkbox permitindo que as metas sejam selecionadas */
+  const goalsToDelete = await checkbox({
+    message: "Selecione as metas que deseja deletar:",
+    choices: [...uncheckedGoals],
+    instructions: false,
+  })
+
+  /* se nenhuma meta for selecioanda, informa ao usuário */
+  if (goalsToDelete.length == 0) {
+    message = "Nenhuma meta foi selecionada!"
+    return
+  }
+
+  /* filtra o array e cria um novo array com as metas não marcadas */
+  goalsToDelete.forEach((item) => {
+    goals = goals.filter((goal) => {
+      console.log(`Diferente: ${goal.value != item}`)
+      return goal.value != item
+    })
+  })
+
+  message = "Meta(s) deletada(s) com sucesso!"
+}
+
+const showMessage = () => {
+  console.clear()
+
+  if (message != "") {
+    console.log(message)
+    console.log("")
+    message = ""
+  }
+}
 
 const start = async () => {
   await fetchGoals()
 
   while (true) {
+    showMessage()
     await saveGoals()
 
     const option = await select({
@@ -124,6 +174,10 @@ const start = async () => {
           value: "incompleted",
         },
         {
+          name: "Deletar meta(s)",
+          value: "delete",
+        },
+        {
           name: "Sair",
           value: "out",
         },
@@ -143,6 +197,9 @@ const start = async () => {
         break
       case "incompleted":
         await listIncompletedGoals()
+        break
+      case "delete":
+        await deleteGoals()
         break
       case "out":
         console.log("Até a próxima!")

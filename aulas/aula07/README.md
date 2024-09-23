@@ -7,6 +7,6 @@
 - [x] listar todas as metas
 - [x] marcar/desmarcar conclusão da meta
 - [x] listar as metas realizadas
-- [ ] listar as metas não realizadas
-- [ ] deletar as metas
-- [ ] persistência das metas
+- [x] listar as metas não realizadas
+- [x] deletar as metas
+- [x] persistência das metas
