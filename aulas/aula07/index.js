@@ -137,6 +137,48 @@ const deleteGoals = async () => {
   message = "Meta(s) deletada(s) com sucesso!"
 }
 
+const updateGoals = async () => {
+  if (goals.length == 0) {
+    message = "Não existem metas cadastradas!"
+    return
+  }
+
+  const uncheckedGoals = goals.map((goal) => {
+    return { value: goal.value, checked: false }
+  })
+
+  const goalsToUpdate = await checkbox({
+    message: "Selecione a(s) meta(s) que deseja atualizar: ",
+    choices: [...uncheckedGoals],
+    instructions: false,
+  })
+
+  if (goalsToUpdate.length == 0) {
+    message = "Nenhuma meta foi selecionada!"
+    return
+  }
+
+  for (const oldGoal of goalsToUpdate) {
+    // solicitar o novo nome para a meta selecionada
+    const newGoal = await input({
+      message: `Digite o novo nome para a meta ${oldGoal}: `,
+    })
+
+    if (newGoal.length == 0) {
+      message = "O novo nome da meta não pode ser vazio!"
+      return
+    }
+
+    const goalIndex = goals.findIndex((goal) => goal.value === oldGoal)
+
+    if (goalIndex !== -1) {
+      goals[goalIndex].value = newGoal
+    }
+  }
+
+  message = "Meta(s) atualizada(s) com sucesso!"
+}
+
 const showMessage = () => {
   console.clear()
 
@@ -174,6 +216,10 @@ const start = async () => {
           value: "incompleted",
         },
         {
+          name: "Atualizar meta(s)",
+          value: "update",
+        },
+        {
           name: "Deletar meta(s)",
           value: "delete",
         },
@@ -197,6 +243,9 @@ const start = async () => {
         break
       case "incompleted":
         await listIncompletedGoals()
+        break
+      case "update":
+        await updateGoals()
         break
       case "delete":
         await deleteGoals()
