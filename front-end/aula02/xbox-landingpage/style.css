@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --brand-color: #9bf00b;
 
@@ -10,5 +16,169 @@
 }
 
 body {
+  height: 100vh;
   font-family: "Inter", sans-serif;
+  background-color: var(--dark);
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  width: 1216px;
+  margin: 0 auto; /* alinha ao centro */
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 63px;
+}
+
+.xbox-logo {
+  width: 112px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+li {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+li:first-child {
+  padding: 6px 10px;
+  background-color: rgba(103, 103, 103, 0.69);
+  border-radius: 50px;
+}
+
+.btn-header {
+  outline: none;
+  cursor: pointer;
+  padding: 12px 32px;
+  background-color: var(--brand-color);
+  color: var(--dark);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+main {
+  width: 1216px;
+  margin: 0 auto; /* alinha ao centro */
+  padding: 112px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main h1 {
+  color: var(--white);
+  font-size: 72px;
+  font-weight: 600;
+}
+
+main p {
+  color: var(--brand-color);
+  font-size: 24;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.xbox-img {
+  margin-top: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.xbox-img img {
+  display: block;
+}
+
+.xbox-img::before {
+  content: ""; /* cria um pseudo-elemento */
+  position: absolute; /* posiciona em relação ao contêiner */
+  top: 0; /* cobre o topo */
+  left: 0; /* cobre a esquerda */
+  right: 0; /* cobre a direita */
+  bottom: 0; /* cobre a parte inferior */
+  background: linear-gradient(
+    rgba(13, 16, 12, 1),
+    rgba(13, 16, 12, 0)
+  ); /* gradiente */
+  z-index: 1; /* coloca acima da imagem */
+}
+
+.product-section {
+  width: 1216px;
+  margin: 0 auto; /* alinha ao centro */
+  display: flex;
+  gap: 146px;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 570px;
+}
+
+.description-container .title {
+  font-size: 64px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.description-container .title span {
+  color: var(--brand-color);
+}
+
+.description-container .description {
+  color: var(--gray-20);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.product-section img {
+  width: 500px;
+}
+
+.game-banner {
+  display: flex;
+  align-items: center;
+  padding: 96px 0;
+  overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+.game-banner img {
+  width: 376px;
+}
+
+footer {
+  width: 1216px;
+  margin: 0 auto; /* alinha ao centro */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px 0;
+}
+
+footer div {
+  display: flex;
+  gap: 56px;
+  color: var(--gray-10);
+  font-size: 12px;
+  font-weight: 400px;
 }
