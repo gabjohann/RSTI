@@ -144,6 +144,11 @@ input:disabled {
   display: none;
 }
 
+pre {
+  margin-block: 1rem;
+  color: red;
+}
+
 form button {
   display: flex;
   align-items: center;

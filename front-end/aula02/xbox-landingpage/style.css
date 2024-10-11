@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --brand-color: #9bf00b;
 
@@ -11,4 +17,201 @@
 
 body {
   font-family: "Inter", sans-serif;
+  height: 100vh;
+
+  background-color: var(--dark);
+}
+
+header {
+  padding: 24px 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  height: 32px;
+  width: 112px;
+  margin-right: 64px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+nav p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav p:first-child {
+  background-color: hsla(0, 0%, 40%, 0.39);
+  padding: 6px 10px;
+  border-radius: 50px;
+}
+
+.btn-header {
+  margin-left: 359px;
+  padding: 12px 32px;
+  background-color: var(--brand-color);
+  color: var(--dark);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+main {
+  padding: 112px 0px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--white);
+  font-size: 72px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--brand-color);
+  padding: 24px 0;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.xbox-img {
+  width: 1224px;
+  height: 347px;
+  padding-top: 24px;
+}
+
+.product-section {
+  display: flex;
+  gap: 146px;
+  padding: 96px 300px;
+}
+
+.product-section-description {
+  width: 570px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-title {
+  color: var(--brand-color);
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.product-title span {
+  color: var(--white);
+}
+
+.product-description {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--gray-20);
+}
+
+.control-img {
+  width: 347.78px;
+}
+
+.galery {
+  display: flex;
+  align-items: center;
+  padding: 96px 0;
+}
+
+.galery img {
+  width: 350.75px;
+}
+
+.current-questions {
+  padding: 48px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.questions-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.current-questions h1 {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--brand-color);
+  padding-bottom: 32px;
+}
+
+.current-questions span {
+  color: var(--white);
+}
+
+.list-questions {
+  width: 1000px;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 32px 0;
+}
+
+hr {
+  border: 1px solid #2e2e2e;
+}
+
+footer {
+  padding: 48px 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+
+  color: var(--gray-10);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

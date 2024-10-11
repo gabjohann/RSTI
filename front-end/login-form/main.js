@@ -5,32 +5,35 @@ form.addEventListener("submit", function (event) {
 
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
+
+  const errorMailElement = document.querySelector(".mail-error");
+  const errorPasswordElement = document.querySelector(".password-error");
+
+  const errorMailMessage = document.createElement("pre");
+  const errorPasswordMessage = document.createElement("pre");
+
+  errorMailElement.innerHTML = "";
+  errorPasswordElement.innerHTML = "";
+
   let valid = true;
 
   if (!validatedEmail(email)) {
     valid = false;
-    alert("Por favor, insira um e-mail válido!");
+    errorMailMessage.textContent = "Por favor, insira um e-mail válido!";
+    errorMailElement.appendChild(errorMailMessage);
   }
 
   if (password.length < 6) {
     valid = false;
-    alert("A senha deve ter pelo menos 6 caracteres.");
+    errorPasswordMessage.textContent =
+      "A senha deve ter pelo menos 6 caracteres.";
+    errorPasswordElement.appendChild(errorPasswordMessage);
   }
 
-  const loggedUser = localStorage.getItem("login-form");
-
-  if (loggedUser) {
-    alert("Você já está logado!");
-  } else {
-    localStorage.setItem("login-form", "loggedUser");
-
+  if (valid) {
     alert("Formulário enviado com sucesso!");
+    localStorage.setItem("login-form", "loggedUser");
   }
-
-  /*   if (valid) {
-    alert("Formulário enviado com sucesso!");
-    localStorage.setItem("login-form", "loggedUser");
-  } */
 });
 
 function validatedEmail(email) {
