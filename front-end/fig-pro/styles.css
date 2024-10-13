@@ -81,6 +81,24 @@ header .container nav a {
   font-size: 1.6rem;
   line-height: 155.3%;
   letter-spacing: 0.96px;
+
+  position: relative;
+}
+
+header .container nav .active {
+  color: var(--black);
+  font-weight: bold;
+}
+
+header .container nav .active:before {
+  content: "";
+  width: 0.4rem;
+  height: 3.2rem;
+  background: url("./assets/line.svg") no-repeat center center;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.2rem;
+  top: -3.6rem;
 }
 
 header .container nav a:hover {
