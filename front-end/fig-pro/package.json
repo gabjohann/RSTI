@@ -1,9 +1,5 @@
 {
-<<<<<<<< HEAD:front-end/beauty-salon/package.json
-  "name": "beauty-salon",
-========
   "name": "fig-pro",
->>>>>>>> main:front-end/fig-pro/package.json
   "private": true,
   "version": "0.0.0",
   "type": "module",

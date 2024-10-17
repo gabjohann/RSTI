@@ -35,12 +35,17 @@ a {
 
 /* VARIABLES */
 :root {
-  --primary-color: #1b1b1b;
-  --dark-primary-color: #242424;
-  --light-color: #868686;
   --white: #ffffff;
   --black: #000000;
+  --gray-color: #f8f8f8;
+  --light-color: #868686;
+  --primary-color: #1b1b1b;
+  --dark-gray-color: #787878;
   --secondary-color: #fcc26b;
+  --dark-primary-color: #242424;
+
+  --line-height: 155%;
+
   --secondary-font: "Road Rage", sans-serif;
 }
 
@@ -82,7 +87,7 @@ header .container nav a {
   color: #514b4b;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 155.3%;
+  line-height: var(--line-height);
   letter-spacing: 0.96px;
 
   position: relative;
@@ -157,7 +162,7 @@ header .container nav a:hover {
 .s-hero .left-text p {
   color: --var(--light-color);
   font-size: 1.6rem;
-  line-height: 155.3%;
+  line-height: var(--line-height);
   margin-bottom: 4.3rem;
 }
 
@@ -209,13 +214,151 @@ header .container nav a:hover {
   color: var(--dark-primary-color);
   font-size: 1.4rem;
   font-weight: 700;
-  line-height: 155.3%;
+  line-height: var(--line-height);
 }
 
 .ilustration {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.s-info {
+  padding-top: 4rem;
+  padding-bottom: 12.2rem;
+}
+
+.s-info p {
+  width: 100%;
+  max-width: 77rem;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  line-height: var(--line-height);
+  margin-bottom: 10.2rem;
+}
+
+.s-info .box {
+  width: 100%;
+  max-width: 85.8rem;
+  height: 27.7rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border: 0.15rem solid #dadada;
+  border-radius: 2rem;
+
+  position: relative;
+}
+
+.s-info .content {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  background: var(--secondary-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 4.5rem;
+}
+
+.s-info .info-ilustration {
+  position: absolute;
+  top: -7.4rem;
+  left: -1.6rem;
+  z-index: 1;
+}
+
+.s-info .content ul {
+  display: flex;
+}
+
+.s-info .content ul li {
+  text-align: center;
+  padding: 1.5rem 2.1rem;
+}
+
+.s-info .content ul li:first-child {
+  padding-left: 0;
+}
+
+.s-info .content ul li:last-child {
+  padding-right: 0;
+}
+
+.s-info .content ul li:not(:first-child) {
+  border-left: 1px solid rgba(255, 255, 255, 0.43);
+}
+
+.s-info .content ul li strong {
+  color: var(--black);
+  font-size: 1.4rem;
+  line-height: var(--line-height);
+  margin-bottom: 1.3rem;
+}
+
+.s-info .content ul li h3 {
+  font-family: var(--secondary-font);
+  color: var(--white);
+  font-weight: 400;
+  font-size: 7.6rem;
+  line-height: var(--line-height);
+}
+
+.how-to-use {
+  background: var(--gray-color);
+  padding-top: 10.4rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.how-to-use .container {
+  display: flex;
+}
+
+.how-to-use .container img {
+  padding-bottom: 7rem;
+}
+.how-to-use .steps {
+  padding-right: 5.4rem;
+}
+
+.how-to-use .steps ul li strong {
+  font-size: 1.8rem;
+  line-height: var(--line-height);
+  color: var(--primary-color);
+}
+
+.how-to-use .steps ul li p {
+  width: 100%;
+  max-width: 50rem;
+  padding-top: 1.8rem;
+  padding-bottom: 4.1rem;
+  color: var(--dark-gray-color);
+  font-size: 1.6rem;
+  line-height: var(--line-height);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  margin: 0 auto;
+  left: 50%;
+  bottom: -24px;
+  padding: 9px 5.2rem;
+}
+
+.btn-secondary span {
+  font-size: 4.6rem;
+  font-family: var(--secondary-font);
+  letter-spacing: 5%;
 }
 
 @media (max-width: 1440px) {
