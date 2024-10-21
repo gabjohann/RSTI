@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Titillium Web", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  padding: 30rem 40rem;
+}
+
+button {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  padding: 1rem 2rem;
+  border: 1px solid red;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+}
