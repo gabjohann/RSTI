@@ -367,7 +367,6 @@ header .container nav a:hover {
 
 .s-stories .title {
   text-align: center;
-  color: red;
 }
 
 .title h4 {
@@ -393,6 +392,7 @@ header .container nav a:hover {
 }
 
 .text {
+  position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -416,6 +416,12 @@ header .container nav a:hover {
 
 .text .description p:not(:last-child) {
   margin-bottom: 1.6rem;
+}
+
+.arrow {
+  position: absolute;
+  bottom: -33rem;
+  right: 2.2rem;
 }
 
 .s-stickers {
