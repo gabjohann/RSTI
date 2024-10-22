@@ -35,12 +35,17 @@ a {
 
 /* VARIABLES */
 :root {
-  --primary-color: #1b1b1b;
-  --dark-primary-color: #242424;
-  --light-color: #868686;
   --white: #ffffff;
   --black: #000000;
+  --gray-color: #f8f8f8;
+  --light-color: #868686;
+  --primary-color: #1b1b1b;
+  --dark-gray-color: #787878;
   --secondary-color: #fcc26b;
+  --dark-primary-color: #242424;
+
+  --line-height: 155%;
+
   --secondary-font: "Road Rage", sans-serif;
 }
 
@@ -82,7 +87,7 @@ header .container nav a {
   color: #514b4b;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 155.3%;
+  line-height: var(--line-height);
   letter-spacing: 0.96px;
 
   position: relative;
@@ -157,7 +162,7 @@ header .container nav a:hover {
 .s-hero .left-text p {
   color: --var(--light-color);
   font-size: 1.6rem;
-  line-height: 155.3%;
+  line-height: var(--line-height);
   margin-bottom: 4.3rem;
 }
 
@@ -208,7 +213,7 @@ header .container nav a:hover {
   color: var(--dark-primary-color);
   font-size: 1.4rem;
   font-weight: 700;
-  line-height: 155.3%;
+  line-height: var(--line-height);
 }
 
 .ilustration {
@@ -217,33 +222,35 @@ header .container nav a:hover {
   right: 0;
 }
 
-.s-data {
+.s-info {
   padding-top: 4rem;
   padding-bottom: 12.2rem;
 }
 
-.s-data p {
-  text-align: center;
+.s-info p {
   width: 100%;
-  max-width: 700px;
+  max-width: 77rem;
   margin: 0 auto;
-  color: var(--dark-primary-color);
+  text-align: center;
+  color: var(--primary-color);
   font-size: 1.6rem;
-  line-height: 155.3%;
+  line-height: var(--line-height);
   margin-bottom: 10.2rem;
 }
 
-.s-data .box {
+.s-info .box {
   width: 100%;
-  height: 27.7rem;
   max-width: 85.8rem;
+  height: 27.7rem;
   margin: 0 auto;
-  border: 0.15rem solid #ffe0b1;
   padding: 0.5rem;
+  border: 0.15rem solid #dadada;
+  border-radius: 2rem;
+
   position: relative;
 }
 
-.s-data .content {
+.s-info .content {
   width: 100%;
   height: 100%;
   border-radius: 2rem;
@@ -255,183 +262,102 @@ header .container nav a:hover {
   padding-right: 4.5rem;
 }
 
-.s-data .content .data-ilustration {
+.s-info .info-ilustration {
   position: absolute;
   top: -7.4rem;
   left: -1.6rem;
   z-index: 1;
 }
 
-.s-data .content ul {
+.s-info .content ul {
   display: flex;
 }
 
-.s-data .content ul li {
+.s-info .content ul li {
   text-align: center;
   padding: 1.5rem 2.1rem;
 }
 
-.s-data .content ul li:first-child {
+.s-info .content ul li:first-child {
   padding-left: 0;
 }
 
-.s-data .content ul li:last-child {
+.s-info .content ul li:last-child {
   padding-right: 0;
 }
 
-.s-data .content ul li &:not(:first-child) {
-  border-left: 1px solid rgba(255, 255, 255, 0.4);
+.s-info .content ul li:not(:first-child) {
+  border-left: 1px solid rgba(255, 255, 255, 0.43);
 }
 
-.s-data .content ul li strong {
-  display: block;
+.s-info .content ul li strong {
   color: var(--black);
   font-size: 1.4rem;
-  line-height: 155.3%;
+  line-height: var(--line-height);
   margin-bottom: 1.3rem;
 }
 
-.s-data .content ul li h3 {
+.s-info .content ul li h3 {
   font-family: var(--secondary-font);
   color: var(--white);
   font-weight: 400;
   font-size: 7.6rem;
-  line-height: 155.3%;
+  line-height: var(--line-height);
 }
 
-.s-how-to-use {
-  position: relative;
-  background: #f8f8f8;
+.how-to-use {
+  background: var(--gray-color);
   padding-top: 10.4rem;
-  padding-bottom: 10.5rem;
-}
-
-.s-how-to-use .container {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.s-how-to-use .container .left-container {
-  flex: 1;
-  max-width: 50rem;
+  flex-direction: column;
   position: relative;
-  margin-bottom: 8.1rem;
 }
 
-.s-how-to-use .container .left-container h2 {
-  font-family: "Road Rage", sans-serif;
-  position: absolute;
-  left: -25rem;
-  bottom: 19rem;
-  color: #c5c5c5;
-  font-size: 8.4rem;
-  font-weight: 400;
-  line-height: 72%;
-  transform: rotate(-90deg);
+.how-to-use .container {
+  display: flex;
 }
 
-.s-how-to-use .container .left-container ul li:not(:last-child) {
-  margin-bottom: 4.1rem;
+.how-to-use .container img {
+  padding-bottom: 7rem;
+}
+.how-to-use .steps {
+  padding-right: 5.4rem;
 }
 
-.s-how-to-use .container .left-container ul li h3 {
-  font-family: "Rock Salt", cursive;
-  color: var(--black);
+.how-to-use .steps ul li strong {
   font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 155.3%;
-  margin-bottom: 1.8rem;
+  line-height: var(--line-height);
+  color: var(--primary-color);
 }
 
-.s-how-to-use .container .left-container ul li p {
-  color: #787878;
-  font-size: 1.6rem;
-  line-height: 155.3%;
-}
-
-.s-how-to-use .container .right-container {
-  position: relative;
-  flex: 1;
-  max-width: 56.9rem;
-  height: 58.9rem;
-  z-index: 1;
-}
-
-.s-how-to-use .container .right-container img {
-  position: absolute;
-}
-
-.s-how-to-use .container .right-container .bear-01 {
-  top: 2.2rem;
-  left: 1.6rem;
-  z-index: 1;
-}
-
-.s-how-to-use .container .right-container .bear-02 {
-  top: 0;
-  right: 3.5rem;
-  z-index: 1;
-}
-
-.s-how-to-use .container .right-container .bear-03 {
-  left: 14.3rem;
-  bottom: 7rem;
-  z-index: 1;
-}
-
-.s-how-to-use .container .right-container .shadow {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+.how-to-use .steps ul li p {
   width: 100%;
-  height: 23.2rem;
-  border-radius: 50%;
-  background: rgba(195, 195, 195, 0.37);
-  filter: blur(5.5px);
-  z-index: -1;
+  max-width: 50rem;
+  padding-top: 1.8rem;
+  padding-bottom: 4.1rem;
+  color: var(--dark-gray-color);
+  font-size: 1.6rem;
+  line-height: var(--line-height);
 }
 
-.s-how-to-use button {
+.btn-secondary {
+  background: var(--secondary-color);
   position: absolute;
-  left: 50%;
-  bottom: -2.4rem;
-  margin-left: -13.3rem;
 
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.8rem;
-  background-color: var(--secondary-color);
-  /* superior direita inferior esquerda */
-  padding: 1.9rem 3.7rem 1.9rem 5.2rem;
 
-  transition: background-color 0.3s ease;
+  margin: 0 auto;
+  left: 50%;
+  bottom: -24px;
+  padding: 9px 5.2rem;
 }
 
-.s-how-to-use button span {
-  color: var(--black);
-  font-family: var(--secondary-font);
+.btn-secondary span {
   font-size: 4.6rem;
-  letter-spacing: 2.3px;
-
-  transition: color 0.3s ease;
-}
-
-.s-how-to-use button img {
-  transition: filter 0.3s ease;
-}
-
-.s-how-to-use button:hover {
-  background: var(--black);
-}
-
-.s-how-to-use button:hover span {
-  color: var(--white);
-}
-
-.s-how-to-use button:hover img {
-  filter: invert(1);
+  font-family: var(--secondary-font);
+  letter-spacing: 5%;
 }
 
 @media (max-width: 1440px) {
