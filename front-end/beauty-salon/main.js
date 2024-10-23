@@ -28,7 +28,7 @@ const swiper = new Swiper(".swiper-container", {
 });
 
 /* scrollreveal: mostra os elementos quando der scroll na página */
-/* const scrollReval = ScrollReveal({
+const scrollReval = ScrollReveal({
   origin: "top",
   distance: "20px",
   duration: 700,
@@ -37,16 +37,16 @@ const swiper = new Swiper(".swiper-container", {
 
 scrollReval.reveal(
   `#home .image, #home .text,
-   #about .image, #about .text,
-   #services header, #services .card,
-   #testimonials header, #testimonials .testimonials,
-   #contact .text, #contact .links,
-   footer .brand, footer .social
+  #about .image, #about .text,
+  #services header, #services .card,
+  #testimonials header, #testimonials .testimonials
+  #contact .text, #contact .links,
+  footer .brand, footer .social
   `,
   {
     interval: 100,
   }
-); */
+);
 
 /* botão de voltar ao topo da página */
 function backToTop() {
