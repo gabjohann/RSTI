@@ -40,6 +40,7 @@ a {
   --gray-color: #f8f8f8;
   --light-color: #868686;
   --primary-color: #1b1b1b;
+  --light-gray: #9c9c9c;
   --dark-gray-color: #787878;
   --secondary-color: #fcc26b;
   --dark-primary-color: #242424;
@@ -360,9 +361,19 @@ header .container nav a:hover {
   letter-spacing: 5%;
 }
 
+.btn-secondary:hover {
+  background-color: black;
+  color: var(--white);
+}
+
+.btn-secondary:hover img {
+  filter: invert(1);
+}
+
 .s-stories {
   padding-top: 19.5rem;
   padding-bottom: 16.2rem;
+  height: 118rem;
 }
 
 .s-stories .title {
@@ -397,7 +408,6 @@ header .container nav a:hover {
   align-items: flex-end;
   justify-content: flex-end;
   gap: 5.7rem;
-  position: relative;
   z-index: 1;
   top: -35rem;
 }
@@ -444,7 +454,6 @@ header .container nav a:hover {
   position: relative;
   display: flex;
   align-items: center;
-  /* gap: 3.8rem; */
   color: var(--dark-primary-color);
   font-size: 15rem;
   font-weight: 400;
@@ -548,14 +557,208 @@ header .container nav a:hover {
   height: 44px;
 }
 
+.s-world {
+  position: relative;
+  overflow: hidden;
+  padding-top: 11.3rem;
+  padding-bottom: 13.4rem;
+  background: url("assets/bg-world.png") no-repeat bottom center;
+}
+
+.s-world .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.s-world .title {
+  text-align: center;
+  margin-bottom: 5.4rem;
+}
+
+.s-world .title h2 {
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-size: 43.1rem;
+  font-weight: 400;
+  line-height: 0.7;
+  letter-spacing: 4.741rem;
+  margin-bottom: 2.9rem;
+}
+
+.s-world .title span {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: var(--line-height);
+  letter-spacing: 5.75px;
+  text-transform: uppercase;
+}
+
+.s-world p {
+  text-align: center;
+  color: var(--light-gray);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: var(--line-height);
+  max-width: 63.2rem;
+  margin-bottom: 6.3rem;
+}
+
+.s-world .btn {
+  background: var(--secondary-color);
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  margin: 0 auto;
+  padding: 0.9rem 3.7rem 0.9rem 5.2rem;
+
+  transition: all 0.3s ease;
+}
+
+.s-world .btn span {
+  font-size: 4.6rem;
+  font-family: var(--secondary-font);
+  letter-spacing: 5%;
+}
+
+.s-world .btn:hover {
+  background-color: black;
+  color: var(--white);
+}
+
+.s-world .btn:hover img {
+  filter: invert(1);
+}
+
+.s-world .ilustra {
+  position: absolute;
+  z-index: 1;
+}
+
+.hawk {
+  top: -4.4rem;
+  left: 0;
+}
+
+.tiger {
+  bottom: 0;
+  left: 0;
+}
+
+.octopus {
+  top: -4.4rem;
+  right: 0;
+}
+
+.owl {
+  right: 0;
+  bottom: 7.1rem;
+}
+
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding-top: 4.9rem;
+  padding-bottom: 5.5rem;
+}
+
+footer .first-area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+footer .left {
+  flex: 1;
+  max-width: 60rem;
+}
+
+.left p {
+  color: var(--light-gray);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: var(--line-height);
+  margin-top: 2.2rem;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1.5rem;
+  max-width: 27rem;
+}
+
+.footer-right h3 {
+  opacity: 0.8;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: var(--line-height);
+  text-transform: uppercase;
+}
+
+.footer-right ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-right li:not(:last-child) {
+  border-right: 1px solid var(--light-gray);
+  padding-right: 1.6rem;
+}
+
+.footer-right a {
+  color: var(--light-gray);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+
+  transition: all 0.3s ease;
+}
+
+.footer-right a:hover {
+  opacity: 1;
+  color: var(--white);
+}
+
+.second-area {
+  border-top: 1px solid #282828;
+  margin-top: 4.1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.second-area p {
+  color: #5c5c5c;
+  font-size: 1.5rem;
+  line-height: var(--line-height);
+  letter-spacing: -1, 0.5rem;
+  margin-top: 4.1rem;
+}
+
 @media (max-width: 1440px) {
   .ilustration {
     right: -20px;
+  }
+
+  .s-world {
+    background-size: cover;
   }
 }
 
 @media (max-width: 1650px) {
   .ilustration {
     right: -36rem;
+  }
+
+  .s-world {
+    background-size: cover;
   }
 }
