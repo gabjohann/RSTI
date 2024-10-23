@@ -363,6 +363,7 @@ header .container nav a:hover {
 .s-stories {
   padding-top: 19.5rem;
   padding-bottom: 16.2rem;
+  height: 118rem;
 }
 
 .s-stories .title {
@@ -444,7 +445,6 @@ header .container nav a:hover {
   position: relative;
   display: flex;
   align-items: center;
-  /* gap: 3.8rem; */
   color: var(--dark-primary-color);
   font-size: 15rem;
   font-weight: 400;
