@@ -542,14 +542,96 @@ header .container nav a:hover {
   height: 44px;
 }
 
+.s-world {
+  position: relative;
+  padding-top: 11.3rem;
+  padding-bottom: 13.4rem;
+  background: url("./assets/bg-world.png") no-repeat bottom center;
+  overflow: hidden; /* garante que as ilustrações não ultrapassem a seção */
+}
+
+.s-world .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.s-world .title {
+  text-align: center;
+  margin-bottom: 5.4rem;
+}
+
+.s-world .title h2 {
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-size: 43.1rem;
+  font-weight: 400;
+  line-height: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 47.41px;
+  margin-bottom: 2.9rem;
+}
+
+.s-world .title span {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: var(--line-height);
+  letter-spacing: 5.75px;
+  text-transform: uppercase;
+}
+
+.s-world p {
+  text-align: center;
+  color: #9c9c9c;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: var(--line-height);
+  max-width: 63.2rem;
+  margin-bottom: 6.3rem;
+}
+
+.s-world .ilustra {
+  position: absolute;
+  z-index: 1;
+}
+
+.hawk {
+  top: -4.4rem;
+  left: 0;
+}
+
+.tiger {
+  bottom: 0;
+  left: 0;
+}
+
+.octopus {
+  top: -4.4rem;
+  right: 0;
+}
+
+.owl {
+  right: 0;
+  bottom: 7.1rem;
+}
+
 @media (max-width: 1440px) {
   .ilustration {
     right: -20px;
+  }
+
+  .s-world {
+    background-size: cover;
   }
 }
 
 @media (max-width: 1650px) {
   .ilustration {
     right: -36rem;
+  }
+
+  .s-world {
+    background-size: cover;
   }
 }
