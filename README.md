@@ -28,4 +28,4 @@
 
 - [Discover Rocketseat](https://www.rocketseat.com.br/discover)
 
-- [Canal Mayl Brito - instrutor na Rocket](https://www.youtube.com/mayk-brito)
+- [Canal Mayk Brito - instrutor na Rocket](https://www.youtube.com/mayk-brito)
